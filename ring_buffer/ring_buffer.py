@@ -7,7 +7,7 @@ class RingBuffer:
         self.current = None
         self.storage = DoublyLinkedList()
 
-    def append(self, item):
+    def append(self, item):  # O(1)
         if self.storage.length is 0:
             self.storage.add_to_head(item)
             self.current = self.storage.head
@@ -24,8 +24,7 @@ class RingBuffer:
             self.current = self.current.next
             self.storage.delete(self.current.next)
 
-    def get(self):
-        # Note:  This is the only [] allowed
+    def get(self):  # O(n)
         list_buffer_contents = []
 
         curr = self.storage.head

@@ -11,8 +11,8 @@ f = open('names_2.txt', 'r')
 names_2 = f.read().split("\n")  # List containing 10000 names
 f.close()
 
-one = BinarySearchTree(names_1[0])
 duplicates = set(names_1) & set(names_2)
+# one = BinarySearchTree(names_1[0])
 # for name_1 in names_1:
 #     one.insert(name_1)
 # for name_2 in names_2:
